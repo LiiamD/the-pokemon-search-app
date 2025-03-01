@@ -19,33 +19,23 @@ let arrPokeData = [];
 
 //const pokeFetch = "https://cors-anywhere.herokuapp.com/https://pokeapi.co/api/v2/pokemon/";
 
-const pokeFetch = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
+//const pokeFetch = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
+//let pokeFetch = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
+// let pokeFetch = "https://thingproxy.freeboard.io/fetch/https://pokeapi.co/api/v2/pokemon/";
+//let pokeFetch = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
 
-/*
-fetch(pokeFetch)
-.then((res) => res.json())
-.then((data) => {
-  pokeData = data;
-  arrPokeData = pokeData.results;
 
-  })
-  .catch((err) => {
-    console.log("Erreur :", err);
-})*/
 
 const pokemonData = async () => {
   try {
-    const res1 = await fetch(pokeFetch); 
+    const res1 = await fetch("https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/"); 
     const data1 = await res1.json();
     pokeData = data1;
     arrPokeData = pokeData.results;
     //console.log(pokeData);
 displayPokemon();
 
-    /*const res2 = await fetch(pokeData.results[0].url)
-    const data2 = await res2.json();
-    pokeData = data2;
-    console.log(pokeData);*/
+
     
   } catch (err) {
     console.log(err);
