@@ -103,9 +103,11 @@ return; //empeche boucle infinie
 }
 
 //addEventListener
-searchBtn.addEventListener("click", () => {
-  pokemonData();
-  //displayPokemon();
-  
+searchBtn.addEventListener("click", pokemonData);
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    pokemonData();
+  }
 })
 
