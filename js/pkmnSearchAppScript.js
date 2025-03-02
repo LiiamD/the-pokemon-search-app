@@ -29,8 +29,6 @@ const pokemonData = async () => {
     //console.log(pokeData);
 displayPokemon();
 
-
-    
   } catch (err) {
     console.log(err);
   }
@@ -100,14 +98,19 @@ return; //empeche boucle infinie
        }
      
 
-}
+};
 
 //addEventListener
-searchBtn.addEventListener("click", pokemonData);
+searchBtn.addEventListener("click", () => {
+  pokemonData();
+});
 
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
+    e.preventDefault();
     pokemonData();
   }
-})
+});
+
+
 
