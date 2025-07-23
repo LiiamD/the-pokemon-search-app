@@ -22,3 +22,5 @@ Petit projet frontend permettant de rechercher un Pokémon par son nom et d'affi
 - Dézippez le dossier
 - Une fois le dossier dézippé, rentrez dans le dossier et ouvrez le .html
 - Enjoy !
+## 📸 Aperçu
+![Aperçu](https://image.noelshack.com/fichiers/2025/30/3/1753300763-screenshot-926.png)
